@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App'
-import data from './statistics/data.json'
-import { Usercard } from './components/social-profile';
-import { Statistics } from './components/statistics'
+import data from './components/statistics/data.json'
+import { Usercard } from './components/social-profile/social-profile';
+import { Statistics } from './components/statistics/statistics'
 
-import friends from './friend-list/friends.json'
-import {FriendList} from './components/friendsCard'
+import friends from './components/friend-list/friends.json'
+import {FriendList} from './components/friend-list/friendsCard'
 
-import transactions from './transaction-history/transactions.json'
-import {TransactionHistory} from './components/transaction-history'
+import transactions from './components/transaction-history/transactions.json'
+import {TransactionHistory} from './components/transaction-history/transaction-history'
 //  ReactDOM.render(Usercard, document.querySelector('#root'))
 
 ReactDOM.render(
