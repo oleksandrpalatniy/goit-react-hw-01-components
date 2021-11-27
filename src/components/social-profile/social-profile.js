@@ -2,33 +2,36 @@ import React from 'react';
 import user from '../social-profile/user.json'
 import PropTypes from 'prop-types'
 
-const {username, tag, location, avatar, stats} = user;
+import './socialprofile.module.css'
+import styles from '../social-profile/socialprofile.module.css'
+
+const { username, tag, location, avatar, stats } = user;
 
 export const Usercard =() => {
-    return (<div>
-        <div>
-            <img
+    return (<div className={styles.Profile}>
+        <div className={styles.User}>
+            <img className={styles.Avatar}
                 src={avatar}
                 alt={username}
-                clas={avatar}
+                clas={styles.image}
             />
-            <p>{username}</p>
-            <p>@{tag}</p>
-            <p>{location}</p>
+            <p className={styles.Name}>{username}</p>
+            <p className={styles.Tag}>@{tag}</p>
+            <p className={styles.Location}>{location}</p>
         </div>
 
-        <ul>
+        <ul className={styles.Statslist}>
             <li>
-                <span>Followers</span>
-                <span>{stats.followers}</span>
+                <span className={styles.Label}>Followers</span>
+                <span className={styles.Quantity}>{stats.followers}</span>
             </li>
             <li>
-                <span>Views</span>
-                <span>{stats.views}</span>
+                <span className={styles.Label}>Views</span>
+                <span className={styles.Quantity}>{stats.views}</span>
             </li>
             <li>
-                <span>Likes</span>
-                <span>{stats.likes}</span>
+                <span className={styles.Label}>Likes</span>
+                <span className={styles.Quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>
