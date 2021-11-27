@@ -1,10 +1,10 @@
 import React from 'react';
 import user from '../social-profile/user.json'
-
+import PropTypes from 'prop-types'
 
 const {username, tag, location, avatar, stats} = user;
 
-function Usercard() {
+export const Usercard =() => {
     return (<div>
         <div>
             <img
@@ -34,5 +34,10 @@ function Usercard() {
     </div>
     )}
 
-
-export default Usercard
+user.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats:  PropTypes.string,
+}
