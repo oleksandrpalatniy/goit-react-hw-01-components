@@ -1,0 +1,21 @@
+.Transaction {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+  border: 2px solid gray;
+}
+
+.TableHead {
+  height: 30px;
+  color: white;
+  background-color: red;
+}
+
+.TableItem {
+  height: 40px;
+}
+
+.TableItem:nth-child(odd) {
+  background-color: rgb(134, 127, 127);
+}
