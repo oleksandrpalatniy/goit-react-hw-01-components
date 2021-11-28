@@ -1,14 +1,14 @@
-// import React from 'react';
+import styles from './statistics.module.css'
 
 export const Statistics = ({title, stats}) => {
   return (
-      <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <ul class="stat-list">
+      <section className={styles.Statistics_container}>
+      {title && <h2 className="title">{title}</h2>}
+      <ul className={styles.Statlist}>
       {stats.map(el =>
-        <li class="item" key={el.id}>
-       <span class="label">{el.label}</span>
-      <span class="percentage">{el.percentage}%</span>
+        <li className={styles.Statitem} key={el.id} style={{backgroundColor: randomColor()}}>
+       <span>{el.label}</span>
+      <span>{el.percentage}%</span>
           </li>
         )}
       </ul>
@@ -16,3 +16,6 @@ export const Statistics = ({title, stats}) => {
     )
 }
 
+
+
+const randomColor = () => "#" + Math.floor(Math.random() * 16777215).toString(16);

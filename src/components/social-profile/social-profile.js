@@ -2,7 +2,7 @@ import React from 'react';
 import user from '../social-profile/user.json'
 import PropTypes from 'prop-types'
 
-import './socialprofile.module.css'
+// import './socialprofile.module.css'
 import styles from '../social-profile/socialprofile.module.css'
 
 const { username, tag, location, avatar, stats } = user;

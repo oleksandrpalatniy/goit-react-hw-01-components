@@ -1,0 +1,27 @@
+.FriendList {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 300px;
+  list-style: circle;
+}
+
+.Item_friend {
+  list-style: circle;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.Status {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.Name {
+  padding-left: 10px;
+}
