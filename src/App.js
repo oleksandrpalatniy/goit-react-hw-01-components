@@ -1,12 +1,29 @@
-// import React from 'react'
-// import Usercard from './components/social-profile'
-// import user from './social-profile/user.json'
+import React from 'react';
 
-// // import StatsList from './components/statList'
-// import data from './statistics/data.json'
-// import StatsCard from './components/statistics'
+import { Container } from './components/container/container';
 
-// export default function App() {
-//   return ()
-//     // < Usercard items = { user } />
-// }
+import data from './components/statistics/data.json'
+import { Usercard } from './components/social-profile/social-profile';
+import { Statistics } from './components/statistics/statistics'
+
+import friends from './components/friend-list/friends.json'
+import {FriendList} from './components/friend-list/friendsCard'
+
+import transactions from './components/transaction-history/transactions.json'
+import {TransactionHistory} from './components/transaction-history/transaction-history'
+
+export default function App() {
+    return (
+    <Container>
+    <Usercard />
+    
+    <Statistics title="Upload stats" stats={data} />
+    <Statistics stats={data} />
+
+    <FriendList friends={friends} />
+    <TransactionHistory items={transactions} />
+  </Container>
+      
+  )
+   
+}

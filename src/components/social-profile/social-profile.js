@@ -2,12 +2,11 @@ import React from 'react';
 import user from '../social-profile/user.json'
 import PropTypes from 'prop-types'
 
-// import './socialprofile.module.css'
 import styles from '../social-profile/socialprofile.module.css'
 
 const { username, tag, location, avatar, stats } = user;
 
-export const Usercard =() => {
+export const Usercard = () => {
     return (<div className={styles.Profile}>
         <div className={styles.User}>
             <img className={styles.Avatar}
@@ -38,7 +37,7 @@ export const Usercard =() => {
     )}
 
 user.propTypes = {
-    username: PropTypes.string.isRequired,
+    username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,
     avatar: PropTypes.string,
