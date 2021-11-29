@@ -1,12 +1,10 @@
 import React from 'react';
-import user from '../social-profile/user.json'
 import PropTypes from 'prop-types'
 
 import styles from '../social-profile/socialprofile.module.css'
 
-const { username, tag, location, avatar, stats } = user;
 
-export const Usercard = () => {
+export const Usercard = ({ username, tag, location, avatar, followers, views, likes }) => {
     return (<div className={styles.Profile}>
         <div className={styles.User}>
             <img className={styles.Avatar}
@@ -22,24 +20,26 @@ export const Usercard = () => {
         <ul className={styles.Statslist}>
             <li>
                 <span className={styles.Label}>Followers</span>
-                <span className={styles.Quantity}>{stats.followers}</span>
+                <span className={styles.Quantity}>{followers}</span>
             </li>
             <li>
                 <span className={styles.Label}>Views</span>
-                <span className={styles.Quantity}>{stats.views}</span>
+                <span className={styles.Quantity}>{views}</span>
             </li>
             <li>
                 <span className={styles.Label}>Likes</span>
-                <span className={styles.Quantity}>{stats.likes}</span>
+                <span className={styles.Quantity}>{likes}</span>
             </li>
         </ul>
     </div>
     )}
 
-user.propTypes = {
-    username: PropTypes.string,
-    tag: PropTypes.string,
-    location: PropTypes.string,
-    avatar: PropTypes.string,
-    stats:  PropTypes.string,
+Usercard.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes:PropTypes.number.isRequired,
 }
